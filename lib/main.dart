@@ -12,7 +12,8 @@ void main() {
                   begin: Alignment.bottomCenter,
                   end: Alignment.topRight)),
           child: const Center(
-            child: Text("hello world"),
+            child: Text("hello world",
+                style: TextStyle(color: Colors.white, fontSize: 18)),
           ),
         ),
       ),
