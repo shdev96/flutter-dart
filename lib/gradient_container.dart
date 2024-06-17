@@ -13,6 +13,10 @@ const endAlignment = Alignment.topRight;
 class GradientContainer extends StatelessWidget {
   const GradientContainer(this.colorOne, this.colorTwo, {super.key});
 
+  const GradientContainer.purple({super.key})
+      : colorOne = Colors.purple,
+        colorTwo = Colors.black;
+
   final Color colorOne;
   final Color colorTwo;
 
@@ -24,8 +28,12 @@ class GradientContainer extends StatelessWidget {
                 colors: [colorOne, colorTwo],
                 begin: startAlignment,
                 end: endAlignment)),
-        child: const Center(
-          child: StyleText("wow world"),
+        child: Center(
+          // child: StyleText("wow world"),
+          child: Image.asset(
+            'assets/images/image_1.jpg',
+            width: 200,
+          ),
         ));
   }
 }
