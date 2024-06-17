@@ -11,18 +11,21 @@ const endAlignment = Alignment.topRight;
 
 // class must start with capital letter
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.colorOne, this.colorTwo, {super.key});
+
+  final Color colorOne;
+  final Color colorTwo;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             gradient: LinearGradient(
-                colors: [Colors.blue, Colors.black],
+                colors: [colorOne, colorTwo],
                 begin: startAlignment,
                 end: endAlignment)),
         child: const Center(
-          child: StyleText("Wow wo2rld"),
+          child: StyleText("wow world"),
         ));
   }
 }
