@@ -1,5 +1,6 @@
 // file name should be lower cases with under line
 import 'package:flutter/material.dart';
+import 'package:flutter_dart/style_text.dart';
 
 // class must start with capital letter
 class GradientContainer extends StatelessWidget {
@@ -14,8 +15,7 @@ class GradientContainer extends StatelessWidget {
                 begin: Alignment.bottomCenter,
                 end: Alignment.topRight)),
         child: const Center(
-          child: Text("hello world",
-              style: TextStyle(color: Colors.white, fontSize: 21)),
+          child: StyleText(),
         ));
   }
 }
