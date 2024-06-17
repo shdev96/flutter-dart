@@ -2,6 +2,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dart/style_text.dart';
 
+// variable must start with lower case
+// Alignment? startAlignment;
+// var startAlignment = Alignment.bottomLeft;
+const startAlignment = Alignment.bottomLeft;
+
+const endAlignment = Alignment.topRight;
+
 // class must start with capital letter
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
@@ -12,8 +19,8 @@ class GradientContainer extends StatelessWidget {
         decoration: const BoxDecoration(
             gradient: LinearGradient(
                 colors: [Colors.blue, Colors.black],
-                begin: Alignment.bottomCenter,
-                end: Alignment.topRight)),
+                begin: startAlignment,
+                end: endAlignment)),
         child: const Center(
           child: StyleText(),
         ));
